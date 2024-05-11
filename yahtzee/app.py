@@ -8,21 +8,18 @@ def newGame():
     # Max number of players is 10 
     test = "test"
 
-
 def showRules():
-    objective = "Roll 5 dice to score combinations, to reach a combined high score!"
-    gameSummary = "Each turn you will roll 5 dice, up to 3 times to score a comination in one or more categories."
-    risk = "After three roles you must place a score, or a zero, in one of 13 categories"
-
-    print(objective)
-    print(gameSummary)
-    print(risk)
-
+    rules = '''********************************************************************************
+*** 1.   Roll 5 dice to score combinations, to reach a combined high score!  ***
+*** 2.  Each turn you will roll 5 dice, up to 3 times to score a comination  ***
+*** 3. After 3 roles you must place a score, or a 0, in one of 13 categories ***
+********************************************************************************
+'''
+    print(rules)
 
 def roll():
     #function to roll dice that aren't on hold
     test = "Test"
-
 
 def main():
     
@@ -51,7 +48,6 @@ def main():
         case _:
             print("I'm sorry, I didn't understand. Let me return you to the main menu")
             main()
-
 
 if __name__ == "__main__":
     main()
