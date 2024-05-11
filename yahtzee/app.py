@@ -1,11 +1,27 @@
 from os import access
+from random import choice
 import numpy as np
 import scoreSheet as scoreSheet
 
-def playGame():
+def newGame():
     # Rounds in the game of Yahtzee = 13
     # Max number of players is 10 
     test = "test"
+
+
+def showRules():
+    objective = "Roll 5 dice to score combinations, to reach a combined high score!"
+    gameSummary = "Each turn you will roll 5 dice, up to 3 times to score a comination in one or more categories."
+    risk = "After three roles you must place a score, or a zero, in one of 13 categories"
+
+    print(objective)
+    print(gameSummary)
+    print(risk)
+
+
+def roll():
+    #function to roll dice that aren't on hold
+    test = "Test"
 
 
 def main():
@@ -20,8 +36,22 @@ def main():
     Turn: 3 of [Roll, Mark Keepers, Stop and set a score]
     
     '''
-    welcome = "Welcome to my Yahtzee game!"
-    playGame()
+    welcome = "Let's play Yahtzee!"
+    directions = "If you need to know the rules, type 1 and press Enter. \nIf you would like to start a new game, type 2 and press Enter\n"
+
+    print(welcome)
+    choice = input(directions)
+
+    match choice:
+        case "1":
+            showRules()
+            main()
+        case "2":
+            newGame()
+        case _:
+            print("I'm sorry, I didn't understand. Let me return you to the main menu")
+            main()
 
 
-main()
+if __name__ == "__main__":
+    main()
